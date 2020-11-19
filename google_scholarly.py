@@ -28,7 +28,7 @@ with open(fname, mode='w') as csv_file:
     publications = author.publications
     new_publications = [pub for pub in publications if 'year' in pub.bib.keys()]
     sorted_pubs = sorted(new_publications,key=lambda pub : pub.bib['year'], reverse=True)
-    recent_pubs = [pub.bib['title'] for pub in asdf[0:3]]
+    recent_pubs = [pub.bib['title'] for pub in sorted_pubs[0:3]]
 
     row = [author_string,hindex,hindex5,i10index,i10index5] + recent_pubs
     csv_writer.writerow(row)
