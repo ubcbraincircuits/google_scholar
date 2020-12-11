@@ -1,8 +1,8 @@
 """
 Script to get h-index, i-index, and recent publications for desired researchers.
 """
-
-# !pip install scholarly
+# make sure you are using scholarly version 0.5.0 for this code
+# !pip install scholarly==0.5.0
 
 from scholarly import scholarly
 import csv
